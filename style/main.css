@@ -21,6 +21,7 @@ p {
 }
 /* head */
 .famous {
+  background-color: #D4D8F3;
 }
 .nav-bar {
   display: flex;
@@ -31,22 +32,25 @@ p {
 
   justify-content: space-between;
 }
+.nav-br__wrapper {
+  display: flex;
+  width: 50%;
+}
 .nav-bar-menu {
-  max-width: 288px;
-  width: 100%;
+  /* max-width: 288px; */
+  /* width: 100%; */
   height: 104px;
   background-color: #000;
   color: #fff;
-  font-size: 16px;
-  font-weight: bold;
-  margin-right: 9.9%;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
+  padding: 0 90px;
+  margin-right: 20%;
 }
 .nav-bar-menu span {
-  font-size: 21px;
+  font-size: 16px;
   font-weight: bold;
 }
 .nav__icon {
@@ -56,10 +60,14 @@ p {
 .nav-bar-logo {
   display: block;
   max-width: 397px;
-  margin-right: 37.5%;
-  padding-top: 10px;
+  height: 73px;
+  /* margin-right: 37.5%; */
+  padding-top: 20px;
 }
 /* Блок кнопок в меню */
+.nav-br__wrapper {
+  width: 50%;
+}
 .nav-bar-blok__btn {
   display: flex;
   gap: 13px;
@@ -74,11 +82,22 @@ p {
   border: 1px solid #000;
   border-radius: 36px;
   padding: 17px;
-  gap: 22px;
+  gap: 15px;
   box-sizing: border-box;
+  transition: all 0.5s;
+}
+.switcher:hover {
+  background-color: #000;
+  cursor: pointer;
+}
+.switcher:hover .swit-icon__sun {
+  color: #fff;
 }
 .switcher img {
   max-width: 32%;
+}
+.swit-icon__sun {
+  font-size: 26px;
 }
 .nav-bar__lang {
   max-width: 98px;
@@ -88,19 +107,33 @@ p {
   text-align: center;
   font-size: 18px;
   font-weight: bold;
+  transition: all 0.5s;
+}
+.nav-bar__lang:hover {
+  background-color: rgb(246, 43, 50);
+  cursor: pointer;
+  color: #fff;
 }
 .write {
   /* max-width: 214px; */
   /* width: 100%; */
-  width: 214px;
-  height: 22px;
+  width: 266px;
+  height: 61px;
   border-radius: 12px;
   background-color: rgb(246, 43, 50);
-  color: #fff;
   text-transform: uppercase;
-  /* font-size: 22px; */
   font-size: 16px;
   font-weight: bold;
   text-align: center;
   padding: 20.5px 30.5px;
+  box-sizing: border-box;
+  transition: all 0.5s;
+  text-decoration: none;
+  color: #fff;
+}
+.write:hover {
+  background-color: #fff;
+  cursor: pointer;
+  color: #000;
+  border: 1px solid #000;
 }

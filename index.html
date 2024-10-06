@@ -4,14 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>famous-team</title>
-    <link rel="stylesheet" href="style/fontello.css">
+    <link rel="stylesheet" href="style/fontello.css" />
     <link rel="stylesheet" href="style/main.css" />
   </head>
   <body>
     <div class="container">
-      <head class="famous">
+      <header class="famous">
         <!-- Верхнее меню сайта -->
         <div class="nav-bar">
+          <div class="nav-br__wrapper">
             <div class="nav-bar-menu">
               <i class="icon-menu nav__icon"></i>
               <span>МЕНЮ</span>
@@ -21,20 +22,22 @@
               alt="Logo Famous.team"
               class="nav-bar-logo"
             />
+          </div>
           <div class="nav-bar-blok__btn">
             <div class="switcher">
               <img src="imges/switch-circle.svg" alt="" />
-              <img src="imges/switch-sun.svg" alt="" />
+              <i class="icon-sun swit-icon__sun"></i>
             </div>
             <select class="nav-bar__lang" name="languages" id="lang">
               <option value="">RU</option>
               <option value="">EN</option>
               <option value="">DE</option>
             </select>
-            <div class="write">Написать нам</div>
+            <!-- <div class="write"><a href="mailto:login841@gmail.com">Написать нам</a></div> -->
+            <a class="write" href="mailto:login841@gmail.com" target="_blank">Написать нам</a>
           </div>
         </div>
-      </head>
+      </header>
     </div>
   </body>
 </html>
