@@ -1,10 +1,21 @@
 html {
   box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  height: 100%;
 }
 body {
   box-sizing: inherit;
   margin: 0;
+  min-height: 100%;
+  position: relative;
+  background-color: #d6d6d5;
 }
+:root {
+  --main-color-font: #1a1a1a;
+  --main-red: #e9081b;
+  --light-font: #8489a6;
+}
+/* Сброс стилей */
 h1,
 h2,
 h3,
@@ -14,14 +25,17 @@ h6,
 p {
   margin: 0;
 }
+ul {
+  margin: 0;
+  padding: 0;
+}
 .container {
   max-width: 2138px;
-  width: 100%;
   padding-right: 62px;
 }
+
 /* head */
 .famous {
-  background-color: #D4D8F3;
 }
 .nav-bar {
   display: flex;
@@ -37,8 +51,7 @@ p {
   width: 50%;
 }
 .nav-bar-menu {
-  /* max-width: 288px; */
-  /* width: 100%; */
+  max-width: 288px;
   height: 104px;
   background-color: #000;
   color: #fff;
@@ -47,7 +60,12 @@ p {
   align-items: center;
   gap: 8px;
   padding: 0 90px;
-  margin-right: 20%;
+  margin-right: 19.5%;
+  transition: all 0.5s;
+}
+.nav-bar-menu:hover {
+  cursor: pointer;
+  background-color: #4e4d4d;
 }
 .nav-bar-menu span {
   font-size: 16px;
@@ -61,7 +79,6 @@ p {
   display: block;
   max-width: 397px;
   height: 73px;
-  /* margin-right: 37.5%; */
   padding-top: 20px;
 }
 /* Блок кнопок в меню */
@@ -110,17 +127,15 @@ p {
   transition: all 0.5s;
 }
 .nav-bar__lang:hover {
-  background-color: rgb(246, 43, 50);
+  background-color: var(--main-red);
   cursor: pointer;
   color: #fff;
 }
 .write {
-  /* max-width: 214px; */
-  /* width: 100%; */
   width: 266px;
   height: 61px;
   border-radius: 12px;
-  background-color: rgb(246, 43, 50);
+  background-color: #ff2d55;
   text-transform: uppercase;
   font-size: 16px;
   font-weight: bold;
@@ -136,4 +151,76 @@ p {
   cursor: pointer;
   color: #000;
   border: 1px solid #000;
+}
+/* блок "Разработка" */
+.heading__flex {
+  position: relative;
+  display: flex;
+  padding-top: 121px;
+  padding-left: 215px;
+}
+.heading-item {
+  max-width: 1099px;
+  width: 49vw;
+  height: 497px;
+  border: 1px solid #000;
+}
+.heading-h1 {
+  font-weight: 700;
+  font-size: 86px;
+  line-height: 100%;
+}
+.heading-ul {
+  padding-left: 26%;
+  padding-top: 98px;
+  font-weight: 700;
+  font-size: 86px;
+  list-style: none;
+  line-height: 44px;
+  letter-spacing: 2px;
+}
+.color-activ {
+  color: red;
+}
+.heading-ul span {
+  font-size: 29px;
+  margin-right: -16px;
+}
+li {
+  padding-bottom: 5px;
+}
+.turn__icon {
+  display: inline-block;
+  transform: rotate(45deg);
+  font-size: 61px;
+  padding-top: 10px;
+  margin-left: -34px;
+}
+/* Блок для картинок слайдера */
+.heading-img {
+  position: absolute;
+  top: 29%;
+  left: 50.5%;
+  width: 51vw;
+  max-width: 1126px;
+  height: 614px;
+  overflow: hidden;
+}
+.heading-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.text-footer {
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #b4b8d8;
+  padding: 26px 0px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
 }

@@ -4,40 +4,68 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>famous-team</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style/fontello.css" />
     <link rel="stylesheet" href="style/main.css" />
   </head>
   <body>
-    <div class="container">
-      <header class="famous">
-        <!-- Верхнее меню сайта -->
-        <div class="nav-bar">
-          <div class="nav-br__wrapper">
-            <div class="nav-bar-menu">
-              <i class="icon-menu nav__icon"></i>
-              <span>МЕНЮ</span>
+    <div class="wrapper">
+      <div class="container">
+        <header class="famous">
+          <!-- Верхнее меню сайта -->
+          <div class="nav-bar">
+            <div class="nav-br__wrapper">
+              <div class="nav-bar-menu">
+                <i class="icon-menu nav__icon"></i>
+                <span>МЕНЮ</span>
+              </div>
+              <img
+                src="imges/nav-baer-logo.png"
+                alt="Logo Famous.team"
+                class="nav-bar-logo"
+              />
             </div>
-            <img
-              src="imges/nav-baer-logo.png"
-              alt="Logo Famous.team"
-              class="nav-bar-logo"
-            />
-          </div>
-          <div class="nav-bar-blok__btn">
-            <div class="switcher">
-              <img src="imges/switch-circle.svg" alt="" />
-              <i class="icon-sun swit-icon__sun"></i>
+            <div class="nav-bar-blok__btn">
+              <div class="switcher">
+                <img src="imges/switch-circle.svg" alt="" />
+                <i class="icon-sun swit-icon__sun"></i>
+              </div>
+              <select class="nav-bar__lang" name="languages" id="lang">
+                <option value="">RU</option>
+                <option value="">EN</option>
+                <option value="">DE</option>
+              </select>
+              <a class="write" href="mailto:XXXX@gmail.com" target="_blank"
+                >Написать нам</a
+              >
             </div>
-            <select class="nav-bar__lang" name="languages" id="lang">
-              <option value="">RU</option>
-              <option value="">EN</option>
-              <option value="">DE</option>
-            </select>
-            <!-- <div class="write"><a href="mailto:login841@gmail.com">Написать нам</a></div> -->
-            <a class="write" href="mailto:login841@gmail.com" target="_blank">Написать нам</a>
           </div>
-        </div>
-      </header>
+        </header>
+        <main>
+          <div class="heading__flex">
+            <div class="heading-item">
+              <h1 class="heading-h1">Разработка под ключ цифровых решений</h1>
+              <ul class="heading-ul">
+                <li><span>01</span> услуги</li>
+                <li class="color-activ">
+                  <span>02</span> о нас <i class="icon-right turn__icon"></i>
+                </li>
+                <li><span>03</span> кейсы</li>
+              </ul>
+            </div>
+            <div class="heading-img">
+              <img src="imges/heading-img 1.png" alt="project picture">
+            </div>
+          </div>
+        </main>
+        <footer class="text-footer">2024 famous.team цифровое интеракетивное агенство</footer>
+      </div>
     </div>
+    <script src="files.js/main.js"></script>
   </body>
 </html>
