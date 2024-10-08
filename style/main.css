@@ -41,7 +41,7 @@ ul {
   display: flex;
   width: 100%;
   height: 104px;
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
   align-items: center;
 
   justify-content: space-between;
@@ -163,7 +163,7 @@ ul {
   max-width: 1099px;
   width: 49vw;
   height: 497px;
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
 }
 .heading-h1 {
   font-weight: 700;
