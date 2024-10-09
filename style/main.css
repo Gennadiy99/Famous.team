@@ -3,17 +3,18 @@ html {
   font-family: "Montserrat", sans-serif;
   height: 100%;
 }
+:root {
+  --famous-bg-color: #d4d8f3;
+  --main-color-font: #1a1a1a;
+  --main-red: #e9081b;
+  --light-font: #8489a6;
+}
 body {
   box-sizing: inherit;
   margin: 0;
   min-height: 100%;
   position: relative;
-  background-color: #d6d6d5;
-}
-:root {
-  --main-color-font: #1a1a1a;
-  --main-red: #e9081b;
-  --light-font: #8489a6;
+  background-color: var(--famous-bg-color);
 }
 /* Сброс стилей */
 h1,
@@ -71,10 +72,12 @@ ul {
   font-size: 16px;
   font-weight: bold;
 }
-.nav__icon {
-  display: inline-block;
-  font-size: 30px;
+.icon-menu::before {
+  margin-left: -5px;
+  width: unset;
+  font-size: 50px;
 }
+
 .nav-bar-logo {
   display: block;
   max-width: 397px;
@@ -96,7 +99,7 @@ ul {
   max-width: 98px;
   width: 100%;
   height: 61px;
-  border: 1px solid #000;
+  border: 1px solid var(--light-font);
   border-radius: 36px;
   padding: 17px;
   gap: 15px;
@@ -120,11 +123,13 @@ ul {
   max-width: 98px;
   width: 100%;
   height: 61px;
+  border: 1px solid var(--light-font);
   border-radius: 12px;
   text-align: center;
   font-size: 18px;
   font-weight: bold;
   transition: all 0.5s;
+  background: transparent;
 }
 .nav-bar__lang:hover {
   background-color: var(--main-red);
@@ -136,6 +141,7 @@ ul {
   height: 61px;
   border-radius: 12px;
   background-color: #ff2d55;
+  box-shadow: 0 17px 50px 0 rgba(232, 7, 18, 0.4);
   text-transform: uppercase;
   font-size: 16px;
   font-weight: bold;
@@ -145,6 +151,9 @@ ul {
   transition: all 0.5s;
   text-decoration: none;
   color: #fff;
+}
+.write i {
+  display: none;
 }
 .write:hover {
   background-color: #fff;
@@ -167,17 +176,21 @@ ul {
 }
 .heading-h1 {
   font-weight: 700;
-  font-size: 86px;
+  /* font-size: 86px; */
+  font-size: clamp(60px, 3.91vw, 86px);
   line-height: 100%;
 }
 .heading-ul {
   padding-left: 26%;
   padding-top: 98px;
   font-weight: 700;
-  font-size: 86px;
+  font-size: clamp(60px, 3.91vw, 86px);
   list-style: none;
   line-height: 44px;
   letter-spacing: 2px;
+}
+.heading-ul li:hover {
+  cursor: pointer;
 }
 .color-activ {
   color: red;
@@ -224,3 +237,97 @@ li {
   width: 100%;
   bottom: 0;
 }
+/* медиазапросы Famous-1 */
+@media (max-width: 460px) {
+  .nav-bar {
+    height: 84px;
+  }
+  .nav-bar-menu {
+    padding: 34px 40px;
+    width: 0px;
+    height: 16px;
+    margin-right: 35px;
+  }
+  /* Y */
+  .icon-menu::before {
+    margin-left: 6px;
+    width: unset;
+    font-size: 42px;
+  }
+  /* Y */
+  .nav-bar-menu span {
+    display: none;
+  }
+  .nav__icon {
+    font-size: 40px;
+    width: 20px;
+  }
+  .nav-bar-blok__btn {
+    padding-top: 0px;
+  }
+  .switcher {
+    display: none;
+  }
+  .nav-bar__lang {
+    display: none;
+  }
+  .nav-bar-logo {
+    display: block;
+    max-width: 241px;
+    height: 45px;
+    padding-top: 18px;
+  }
+  /* D */
+  .write {
+    padding: 20px 20px;
+    width: 66px;
+    height: 61px;
+    box-shadow: 0 17px 50px 0 rgba(232, 7, 18, 0.4);
+    background: linear-gradient(90deg, #ed040b 0%, #98057e 100%);
+  }
+  .write p {
+    display: none;
+  }
+  .write i {
+    display: inline-block;
+  }
+  .container {
+    padding-right: 0;
+  }
+  .heading__flex {
+    padding-top: 57px;
+    padding-left: 27px;
+    /* justify-content: start; */
+    flex-direction: column;
+  }
+  .heading-item {
+    /* max-width: 1099px; */
+    width: 100%;
+    /* height: 497px; */
+  }
+  .heading-img {
+    position: static;
+    /* top: 29%; */
+    /* left: 50.5%; */
+    width: 100%;
+  }
+/* Проба  order*/
+  .heading-item{
+    order: 2;
+  }
+  .heading-img{
+    order: 1;
+  }
+
+}
+
+/* Таблица брекпоинтов с использованием max-width
+Назначение	Максимальная ширина (px)	Медиазапрос
+Очень большие экраны	2200px	@media (max-width: 2200px) { ... }
+Экстра большие экраны	1920px	@media (max-width: 1920px) { ... }
+Большие экраны	1600px	@media (max-width: 1600px) { ... }
+Средние экраны	1366px	@media (max-width: 1366px) { ... }
+Планшеты	1024px	@media (max-width: 1024px) { ... }
+Планшеты (портрет)	768px	@media (max-width: 768px) { ... }
+Мобильные устройства	480px	@media (max-width: 480px) { ... }
+Очень маленькие экраны	320px	@media (max-width: 320px) { ... } */
