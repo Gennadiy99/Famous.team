@@ -8,17 +8,27 @@ html {
 *::after {
   box-sizing: inherit;
 }
-/* Временный стиль
+/* 
+Временный стиль
 * {
   outline: 1px solid red;
-} */
+} 
+*/
 body {
   margin: 0;
   min-height: 100%;
   position: relative;
-  background-color: var(--famous-bg-color);
   padding-bottom: 86px;
+  background: radial-gradient(
+    ellipse,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(212, 216, 243, 1) 100%
+  );
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
+/* background-color: var(--famous-bg-color); */
 :root {
   --famous-bg-color: #d4d8f3;
   --main-color-font: #1a1a1a;
@@ -169,6 +179,7 @@ ul {
   color: #000;
   border: 1px solid #000;
 }
+
 /* блок "Разработка" */
 .heading__flex {
   position: relative;
@@ -197,7 +208,9 @@ ul {
   line-height: 49px;
   letter-spacing: 2px;
 }
-.heading-ul li {
+
+.head-li__posit {
+  position: relative;
   display: flex;
   align-items: baseline;
   padding-bottom: 5px;
@@ -252,6 +265,7 @@ ul {
   padding: 26px 0px;
   position: fixed;
   bottom: 0;
+  z-index: 100;
 }
 
 /* медиазапросы Famous-1 */
@@ -267,6 +281,9 @@ ul {
   .nav-bar-menu {
     margin-right: 4.5%;
     max-width: 250px;
+  }
+  .services-mod-wind {
+    left: 10%;
   }
 }
 @media (max-width: 1200px) {
@@ -302,7 +319,7 @@ ul {
   .nav-bar__lang {
     display: none;
   }
-  .heading-ul li {
+  .head-li__posit {
     width: 363px;
   }
   .write {
@@ -336,13 +353,17 @@ ul {
     line-height: 65px;
     padding-top: 10px;
   }
-  .heading-ul li {
+  .head-li__posit {
     width: 460px;
   }
   .heading-img {
     order: 1;
     position: static;
     width: 100%;
+  }
+  .wrapper-cases__flex {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 @media (max-width: 768px) {
@@ -429,13 +450,7 @@ ul {
   .heading-img img {
     transform: scale(1.5) translate(1px, -54px);
   }
-  /* .heading-img img {
-    object-fit: contain;
-  } */
-  /* Правильней использовать свойство object-fit: contain что бы любое изображение подстраивалось под Блок не теряя пропорции.transform здесь подходит только для схожести с макетом но приведет к искажению реального изображения и не оно не все будет помещаться в блок */
-  .heading-ul li {
-    display: flex;
-    align-items: baseline;
+  .head-li__posit {
     padding-bottom: 0px;
     height: 65px;
     width: 100%;
@@ -459,20 +474,200 @@ ul {
     margin: 0 auto;
   }
 }
+
 @media (max-width: 460px) {
   .nav-bar-menu {
     margin-right: 15px;
   }
   .heading-h1 {
-    font-size: clamp(60px, 3.91vw, 86px);
+    font-size: clamp(40px, 3.91vw, 86px);
     text-align: center;
   }
   .write {
     padding: 7px 0px;
     width: 60px;
     height: 56px;
-    margin-right: 5px
+    margin-right: 5px;
   }
+}
+/* Стили модальных окон */
+.services-mod-wind {
+  border-radius: 60px;
+  max-width: 2000px;
+  width: 90vw;
+  height: auto;
+  padding-top: 68px;
+  padding-bottom: 93px;
+  box-shadow: 0 75px 100px 0 rgb(32 31 79 / 25%);
+  background: #fff;
+  position: absolute;
+  top: 110%;
+  left: -94%;
+  z-index: 100;
+}
+/* Разделить стиль на модальных окнах services / cases */
+.cases-mod-wind {
+  border-radius: 60px;
+  max-width: 2000px;
+  width: 90vw;
+  height: auto;
+  padding-top: 68px;
+  padding-bottom: 93px;
+  box-shadow: 0 75px 100px 0 rgb(32 31 79 / 25%);
+  background: #fff;
+  position: absolute;
+  top: 110%;
+  left: -94%;
+  z-index: 100;
+}
+.mod-container {
+  /* max-width: 994px; */
+  max-width: 1012px;
+  height: auto;
+  margin: 0 auto;
+  padding: 0px 20px;
+}
+
+.mod-wind-list__flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 26px;
+  margin-bottom: 35px;
+  list-style: none;
+  padding: 0 15px;
+
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 145%;
+  text-transform: uppercase;
+  text-align: center;
+  color: #000;
+}
+.services-mod-wind p {
+  font-family: var(--font-family);
+
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 155%;
+  color: var(--main-color-font);
+
+  padding-top: 23px;
+  margin-bottom: 20px;
+}
+.mod-btn-close {
+  font-size: 3vw;
+  position: absolute;
+  top: 2%;
+  right: 1%;
+}
+.icon-cancel {
+}
+.mod-btn-order {
+  border-radius: 30px;
+  padding: 20px 34px;
+  max-width: 284px;
+  width: 100%;
+  height: 61px;
+
+  box-shadow: 0 17px 50px 0 rgba(232, 7, 18, 0.4);
+  background: linear-gradient(90deg, #ed040b 0%, #98057e 100%);
+
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+}
+.mod__hidden {
+  display: none;
+}
+.mod__open {
+  display: block;
+}
+.active__padding {
+  margin-bottom: 47%;
+}
+/* Медиазапросы для модального окна */
+@media (max-width: 1600px) {
+  .services-mod-wind {
+    top: 110%;
+    left: -50%;
+  }
+}
+@media (max-width: 1366px) {
+  .services-mod-wind {
+    left: -30%;
+  }
+}
+@media (max-width: 1200px) {
+  .services-mod-wind {
+    left: 0%;
+  }
+}
+@media (max-width: 900px) {
+  .services-mod-wind {
+    left: 50%;
+    transform: translate(-50%, 0px);
+  }
+}
+/* Стили модал Кейсы */
+.wrapper-cases__flex {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+.mod-container__cases {
+  max-width: 1804px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+/* кнопка мод окно Кейсы */
+.mod-btn-cases {
+  display: block;
+  max-width: 360px;
+  width: 100%;
+  height: 61px;
+  padding: 20px 34px;
+  margin: 0 auto 50px;
+  border-radius: 30px;
+  box-shadow: 0 17px 50px 0 rgb(232 7 18 / 40%);
+  background: linear-gradient(90deg, #ed040b 0%, #98057e 100%);
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.cases__item {
+  flex-basis: 340px;
+  flex-grow: 1;
+  position: relative;
+}
+/* .cases__item-img {
+} */
+.cases__item img {
+  width: 100%;
+  object-fit: cover;
+}
+.cases-block__icon {
+  /* width: 5vw;
+  height: 5vw; */
+  width: 5%;
+  height: 5%;
+  padding: 49px;
+  background-color: #14a2f5;
+  border-radius: 20px 0 20px 0;
+
+  position: absolute;
+  bottom: 18%;
+  right: 0%;
+}
+.cases-block__icon img {
+  width: 1vw;
+  height: auto;
 }
 
 /* Таблица брекпоинтов с использованием max-width
