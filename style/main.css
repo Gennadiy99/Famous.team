@@ -626,11 +626,13 @@ ul {
 }
 /* кнопка мод окно Кейсы */
 .mod-btn-cases {
+  text-decoration: none;
   display: block;
   max-width: 360px;
   width: 100%;
   height: 61px;
-  padding: 20px 34px;
+  padding: 6px 34px;
+  letter-spacing: 0px;
   margin: 0 auto 50px;
   border-radius: 30px;
   box-shadow: 0 17px 50px 0 rgb(232 7 18 / 40%);
@@ -653,30 +655,77 @@ ul {
   object-fit: cover;
 }
 .cases-block__icon {
-  /* width: 5vw;
-  height: 5vw; */
   width: 5%;
-  height: 5%;
-  padding: 49px;
+  height: auto;
+  padding: 20px 49px;
   background-color: #14a2f5;
   border-radius: 20px 0 20px 0;
-
   position: absolute;
-  bottom: 18%;
+  bottom: 0%;
   right: 0%;
+  transform: translate(0%, -116%);
 }
 .cases-block__icon img {
   width: 1vw;
   height: auto;
 }
 
-/* Таблица брекпоинтов с использованием max-width
-Назначение	Максимальная ширина (px)	Медиазапрос
-Очень большие экраны	2200px	@media (max-width: 2200px) { ... }
-Экстра большие экраны	1920px	@media (max-width: 1920px) { ... }
-Большие экраны	1600px	@media (max-width: 1600px) { ... }
-Средние экраны	1366px	@media (max-width: 1366px) { ... }
-Планшеты	1024px	@media (max-width: 1024px) { ... }
-Планшеты (портрет)	768px	@media (max-width: 768px) { ... }
-Мобильные устройства	480px	@media (max-width: 480px) { ... }
-Очень маленькие экраны	320px	@media (max-width: 320px) { ... } */
+/* Стили для страницы Page-cases */
+.container-page-cases {
+  /* max-width: 1200px; */
+  max-width: 1230px;
+  margin: 0 auto;
+  padding-left: 35px;
+}
+.h1-page-cases {
+  padding-top: 53px;
+  margin-bottom: 62px;
+  font-weight: 700;
+  font-size: 86px;
+  line-height: 100%;
+  text-align: center;
+  color: var(--main-color-font);
+}
+.page-cases__flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 26px;
+  max-width: 1199px;
+  height: auto;
+  margin: 0 auto 45px;
+}
+.page-item {
+  border-radius: 0 0 70px 0;
+  width: 381px;
+  flex-basis: 381px;
+  flex-grow: 1;
+  height: auto;
+}
+.page-item img {
+  width: 100%;
+  object-fit: contain;
+}
+.p-page-cases {
+  padding-top: 24px;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 155%;
+  color: var(--main-color-font);
+}
+.page-cases-btn {
+  display: block;
+  border: #ED040B solid 1px;
+  border-radius: 30px;
+  padding: 20px 34px;
+  width: 284px;
+  height: 61px;
+  margin: 0 auto;
+
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--main-color-font);
+}
+.p-page-case {
+}
