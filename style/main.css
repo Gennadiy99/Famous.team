@@ -49,8 +49,10 @@ p {
 ul {
   margin: 0;
   padding: 0;
+  /* list-style: none; */
 }
 .container {
+  position: relative;
   max-width: 2138px;
   /* padding-right: 62px; */
 }
@@ -472,6 +474,11 @@ ul {
     letter-spacing: 0.1em;
     max-width: 422px;
     margin: 0 auto;
+  }
+}
+@media (max-width: 414px) {
+  .write {
+    display: none;
   }
 }
 
@@ -905,4 +912,52 @@ ul {
     margin: 32px auto 0;
     padding-inline: 18px;
   }
+}
+/* Стили для бокового меню */
+.side-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  max-width: 1700px;
+  width: 100%;
+  background: var(--main-color-font);
+  padding-top: 37px;
+  padding-bottom: 187px;
+  padding-left: 25%;
+
+  font-weight: 700;
+
+  color: #fff;
+}
+.side-menu ul {
+  list-style: none;
+}
+.side-menu-beck {
+  text-align: right;
+  font-size: 16px;
+  text-transform: uppercase;
+  padding-right: 15%;
+}
+.side-menu-beck p {
+  display: inline;
+}
+.icon-right {
+}
+
+.side-menu-beck .icon-right::before {
+  display: inline-block;
+  transform: rotate(180deg);
+}
+.side-menu-beck:hover {
+  color: var(--main-red);
+  cursor: pointer;
+}
+.side-menu-list {
+  font-size: 86px;
+}
+.internal-list {
+  font-weight: 600;
+  font-size: 46px;
+  padding-left: 10%;
 }
