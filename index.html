@@ -47,12 +47,29 @@
             </div>
           </div>
         </header>
-        <!-- Боковое меню -->
+        <!-- Боковое меню, что бы отобразить удалить класс mod__hidden -->
         <div class="side-menu mod__hidden">
           <div class="side-menu-beck">
             <i class="icon-right side__icon"></i>
             <p>Меню</p>
           </div>
+<!-- Блок кнопок появляется на экране 1080px /  mod__hidden отключается в медиазапросе-->
+          <div class=" side-blok__btn mod__hidden">
+            <div class=" side-bar__switcher">
+              <img src="imges/switch-circle.svg" alt="" />
+              <i class="icon-sun swit-icon__sun"></i>
+            </div>
+            <select class=" side-bar__lang" name="languages" id="lang">
+              <option value="">RU</option>
+              <option value="">EN</option>
+              <option value="">DE</option>
+            </select>
+            <a class=" side-write" href="mailto:XXXX@gmail.com" target="_blank">
+              <p>Написать нам</p>
+              <i class="icon-mail-alt"></i>
+            </a>
+          </div>
+
           <ul class="side-menu-list">
             <li>главная</li>
             <li>услуги
@@ -72,12 +89,12 @@
           <div class="heading__flex">
             <h1 class="heading-h1">Разработка под ключ цифровых решений</h1>
             <ul class="heading-ul">
-              <li class="head-li__posit color-activ" id="services">
+              <li class="head-li__posit color-activ " id="services">
                 <!--вставить в li /active__padding / отступ для Модального между списками  -->
                 <span>01</span>
                 <p>услуги</p>
                 <i class="icon-right turn__icon"></i>
-                <!-- модальное окно-1 убрать класс / mod__hidden / отобразить Модальное окно -->
+                <!-- Модальное окно-1 для отображения убрать класс / mod__hidden / -->
                 <div class="services-mod-wind mod__hidden">
                   <div class="mod-container">
                     <i class="mod-btn-close icon-cancel"></i>
@@ -104,11 +121,12 @@
                   </div>
                 </div>
               </li>
-              <li class="head-li__posit" id="about Us" class="color-activ">
+              <li class="head-li__posit " id="about Us" class="color-activ">
+                <!--вставить в li /active__padding / отступ для Модального между списками  -->
                 <span>02</span>
                 <p>о нас</p>
                 <i class="icon-right turn__icon"></i>
-                <!-- модальное окно-2 убрать класс / mod__hidden / отобразить Модальное окно -->
+                <!-- модальное окно-2 для отображения убрать класс / mod__hidden / -->
                 <div class="services-mod-wind mod__hidden">
                   <div class="mod-container">
                     <i class="mod-btn-close icon-cancel"></i>
@@ -135,7 +153,7 @@
                 <span>03</span>
                 <p>кейсы</p>
                 <i class="icon-right turn__icon"></i>
-                <!-- модальное окно-3 убрать класс / mod__hidden / для отображения Модального -->
+                <!-- модальное окно-3 для отображения убрать класс / mod__hidden / -->
                 <div class="services-mod-wind cases-mod-wind ">
                   <div class="mod-container__cases">
                     <i class="mod-btn-close icon-cancel"></i>

@@ -108,20 +108,22 @@ ul {
 .nav-br__wrapper {
   width: 50%;
 }
-.nav-bar-blok__btn {
+.nav-bar-blok__btn,
+.side-blok__btn {
   display: flex;
   gap: 13px;
   align-items: center;
   padding-top: 9px;
 }
-.nav-bar__switcher {
+.nav-bar__switcher,
+.side-bar__switcher {
   display: flex;
   max-width: 98px;
   width: 100%;
   height: 61px;
   border: 1px solid var(--light-font);
   border-radius: 36px;
-  padding: 17px;
+  padding: 13px;
   gap: 15px;
   box-sizing: border-box;
   transition: all 0.5s;
@@ -133,13 +135,15 @@ ul {
 .nav-bar__switcher:hover .swit-icon__sun {
   color: #fff;
 }
-.nav-bar__switcher img {
+.nav-bar__switcher img,
+.side-bar__switcher img {
   max-width: 32%;
 }
 .swit-icon__sun {
   font-size: 26px;
 }
-.nav-bar__lang {
+.nav-bar__lang,
+.side-bar__lang {
   max-width: 98px;
   width: 100%;
   height: 61px;
@@ -151,12 +155,17 @@ ul {
   transition: all 0.5s;
   background: transparent;
 }
-.nav-bar__lang:hover {
+.side-bar__lang {
+  color: #fff;
+}
+.nav-bar__lang:hover,
+.side-bar__lang:hover {
   background-color: var(--main-red);
   cursor: pointer;
   color: #fff;
 }
-.write {
+.write,
+.side-write {
   width: 266px;
   height: 61px;
   border-radius: 12px;
@@ -172,10 +181,12 @@ ul {
   text-decoration: none;
   color: #fff;
 }
-.write i {
+.write i,
+.side-write i {
   display: none;
 }
-.write:hover {
+.write:hover,
+.side-write:hover {
   background-color: #fff;
   cursor: pointer;
   color: #000;
@@ -417,14 +428,9 @@ ul {
     padding: 10px 0px;
     width: 66px;
     height: 61px;
-    box-shadow: 0 17px 50px 0 rgba(232, 7, 18, 0.4);
-    background: linear-gradient(90deg, #ed040b 0%, #98057e 100%);
   }
   .write p {
     display: none;
-  }
-  .write i {
-    display: inline-block;
   }
   .container {
     padding-right: 0;
@@ -542,13 +548,15 @@ ul {
   margin-bottom: 35px;
   list-style: none;
   padding: 0 15px;
-
   font-weight: 700;
   font-size: 22px;
   line-height: 145%;
   text-transform: uppercase;
   text-align: center;
   color: #000;
+}
+.mod-wind-list__flex li:hover {
+  cursor: pointer;
 }
 .services-mod-wind p {
   font-family: var(--font-family);
@@ -597,7 +605,7 @@ ul {
 /* Медиазапросы для модального окна */
 @media (max-width: 1600px) {
   .services-mod-wind {
-    top: 110%;
+    top: 135%;
     left: -50%;
   }
 }
@@ -918,16 +926,14 @@ ul {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 100;
+  z-index: 110;
   max-width: 1700px;
-  width: 100%;
+  width: 77vw;
   background: var(--main-color-font);
   padding-top: 37px;
   padding-bottom: 187px;
   padding-left: 25%;
-
   font-weight: 700;
-
   color: #fff;
 }
 .side-menu ul {
@@ -954,10 +960,77 @@ ul {
   cursor: pointer;
 }
 .side-menu-list {
-  font-size: 86px;
+  font-size: clamp(46px, 3.9vw, 86px);
 }
 .internal-list {
   font-weight: 600;
   font-size: 46px;
+  font-size: clamp(32px, 2.09vw, 46px);
   padding-left: 10%;
+}
+/* Медиа запросы для Бокового меню */
+
+@media (max-width: 1900px) {
+  .side-menu {
+    width: 60%;
+  }
+}
+@media (max-width: 1080px) {
+  .side-menu {
+    width: 90%;
+  }
+  .side-blok__btn {
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  .side-menu {
+    width: 95%;
+    height: 100%;
+  }
+  .side-menu-beck {
+    font-size: 18px;
+    margin-bottom: 20%;
+  }
+}
+@media (max-width: 520px) {
+  .side-write {
+    padding: 14px 0px;
+    width: 76px;
+    height: 71px;
+    box-shadow: 0 17px 50px 0 rgba(232, 7, 18, 0.4);
+    background: linear-gradient(90deg, #ed040b 0%, #98057e 100%);
+    margin-right: 20px;
+  }
+}
+@media (max-width: 520px) {
+  .side-write p {
+    display: none;
+  }
+  .side-write i {
+    display: inline-block;
+    font-size: 30px;
+  }
+}
+@media (max-width: 460px) {
+  .side-menu {
+    padding-left: 15%;
+  }
+}
+
+/* Создание дубликата блока но изм наз классов для Бокового меню */
+.nav-bar-blok__btn {
+}
+.nav-bar__switcher {
+}
+.icon-sun {
+}
+.swit-icon__sun {
+}
+.nav-bar__lang {
+}
+.write {
+}
+.icon-mail-alt {
 }
