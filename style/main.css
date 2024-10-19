@@ -232,7 +232,7 @@ ul {
 .heading-ul li:hover {
   cursor: pointer;
 }
-.color-activ {
+.color-active {
   color: red;
 }
 .heading-ul span {
@@ -659,7 +659,7 @@ ul {
   text-align: center;
 }
 .cases__item {
-  flex-basis: 340px;
+  flex-basis: 340px; 
   flex-grow: 1;
   position: relative;
 }
