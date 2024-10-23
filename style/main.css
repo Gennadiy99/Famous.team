@@ -229,7 +229,8 @@ ul {
   padding-bottom: 5px;
   width: 416px;
 }
-.block__flex{
+.block__flex {
+  width: 100%;
   display: flex;
   padding-bottom: 15px;
 }
@@ -474,6 +475,10 @@ ul {
     padding-top: 33px;
     margin-left: auto;
   }
+  .icon-right {
+    font-size: 30px;
+    padding-top: 0px;
+  }
   .icon-mail-alt:before {
     font-size: 139%;
   }
@@ -663,7 +668,7 @@ ul {
   text-align: center;
 }
 .cases__item {
-  flex-basis: 340px; 
+  flex-basis: 340px;
   flex-grow: 1;
   position: relative;
 }
