@@ -945,6 +945,9 @@ ul {
   font-weight: 700;
   color: #fff;
 }
+.block-show {
+  display: block;
+}
 .side-menu ul {
   list-style: none;
 }
