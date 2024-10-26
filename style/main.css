@@ -521,7 +521,8 @@ ul {
   height: auto;
   padding-top: 68px;
   padding-bottom: 93px;
-  box-shadow: 0 75px 100px 0 rgb(32 31 79 / 25%);
+  /* box-shadow: 0 75px 100px 0 rgb(32 31 79 / 25%); */
+  box-shadow: 5px 7px 46px 0 rgb(32 31 79 / 60%);
   background: #fff;
   position: absolute;
   top: 95%;
@@ -634,6 +635,12 @@ ul {
   .services-mod-wind {
     left: 47%;
     transform: translate(-50%, 0px);
+  }
+  .mod-btn-close {
+    font-size: 5vw;
+    top: 0%;
+    right: 3%;
+    z-index: 100;
   }
 }
 /* Стили модал Кейсы */
@@ -1026,10 +1033,18 @@ ul {
     display: inline-block;
     font-size: 30px;
   }
+  .mod-btn-close {
+    font-size: 6vw;
+    top: 0.5%;
+  }
 }
 @media (max-width: 460px) {
   .side-menu {
     padding-left: 15%;
+  }
+  .mod-btn-close {
+    font-size: 6vw;
+    top: 0.8%;
   }
 }
 
