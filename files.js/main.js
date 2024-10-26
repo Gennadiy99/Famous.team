@@ -7,6 +7,7 @@ const modWind_2 = document.getElementById('window_about');
 const modWind_3 = document.getElementById('window_cases');
 
 link_services.addEventListener('click', function(){
+  console.log('Клик по Списку');
   modWind_1.classList.toggle('mod__open');
   link_services.classList.toggle('color-active');
 })
