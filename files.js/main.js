@@ -54,3 +54,8 @@ const closeSideMenu = document.querySelector('.side-menu-beck');
 closeSideMenu.addEventListener('click', function(){
   sideBar.classList.toggle('block-show');
 })
+// Ссылки бокового меню на страницы
+const ExitMain = document.getElementById('sideExitMain');
+const ExitSevices = document.getElementById('sideExitSevices');
+const ExitAbout = document.getElementById('sideExitAbout');
+const ExitCases = document.getElementById('sideExitCases');

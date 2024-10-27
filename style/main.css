@@ -705,10 +705,10 @@ ul {
 
 /* Стили для страницы Page-cases */
 .container-page-cases {
-  /* max-width: 1200px; */
   max-width: 1230px;
   margin: 0 auto;
   padding-left: 35px;
+  padding-right: 30px;
 }
 .h1-page-cases {
   padding-top: 53px;
@@ -931,6 +931,10 @@ ul {
   }
   .page-btn__close {
     right: 11%;
+  }
+  .container-page-cases {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 @media (max-width: 460px) {
