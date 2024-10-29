@@ -605,10 +605,10 @@ ul {
   text-align: center;
   color: #fff;
 }
-.mod__hidden {
+.mod__hidden, .hidden {
   display: none;
 }
-.mod__open {
+.mod__open, .show{
   display: block;
 }
 .active__padding {
@@ -681,8 +681,10 @@ ul {
   flex-grow: 1;
   position: relative;
 }
-/* .cases__item-img {
-} */
+.cases__item-img {
+  width: 100%;
+  object-fit: cover;
+}
 .cases__item img {
   width: 100%;
   object-fit: cover;
@@ -951,6 +953,7 @@ ul {
   z-index: 110;
   max-width: 1700px;
   width: 77vw;
+  height: 90vh;
   background: var(--main-color-font);
   padding-top: 37px;
   padding-bottom: 187px;
