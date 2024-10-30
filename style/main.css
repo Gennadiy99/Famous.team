@@ -247,13 +247,21 @@ ul {
 .heading-ul p {
   display: inline-block;
 }
-
-.turn__icon {
-  display: inline-block;
-  transform: rotate(45deg);
+/* стиль для иконки списка "стрелка" */
+.icon-right {
   font-size: 37px;
   padding-top: 10px;
   margin-left: auto;
+}
+
+.rotate__down {
+  display: inline-block;
+  transform: rotate(45deg);
+}
+.rotate_up {
+  display: inline-block;
+  transform: rotate(315deg) !important;
+  color: red;
 }
 /* Блок для картинок слайдера */
 .heading-img {
@@ -469,12 +477,8 @@ ul {
     height: 65px;
     width: 100%;
   }
-  .turn__icon {
-    display: inline-block;
-    transform: rotate(45deg);
-    font-size: 37px;
+  .rotate__down {
     padding-top: 33px;
-    margin-left: auto;
   }
   .icon-right {
     font-size: 30px;
@@ -605,10 +609,12 @@ ul {
   text-align: center;
   color: #fff;
 }
-.mod__hidden, .hidden {
+.mod__hidden,
+.hidden {
   display: none;
 }
-.mod__open, .show{
+.mod__open,
+.show {
   display: block;
 }
 .active__padding {
@@ -884,6 +890,7 @@ ul {
 .page__item:nth-child(1) {
   text-align: right;
 }
+
 .page__item:nth-child(1) .icon-right::before {
   transform: rotate(180deg);
 }
@@ -899,8 +906,8 @@ ul {
   cursor: pointer;
   color: #e9081b;
 }
-.icon-right {
-}
+/* .icon-right {
+} */
 /* Стилили для Case1 Page */
 @media (max-width: 1900px) {
   .page {
@@ -976,8 +983,8 @@ ul {
 .side-menu-beck p {
   display: inline;
 }
-.icon-right {
-}
+/* .icon-right {
+} */
 
 .side-menu-beck .icon-right::before {
   display: inline-block;
