@@ -953,6 +953,7 @@ ul {
   }
 }
 /* Стили для бокового меню */
+
 .side-menu {
   position: absolute;
   top: 0;
@@ -1002,6 +1003,21 @@ ul {
   font-size: 46px;
   font-size: clamp(32px, 2.09vw, 46px);
   padding-left: 10%;
+}
+.side-menu-list {
+}
+.side-p {
+}
+.internal-list {
+}
+.hidden {
+}
+#sideExitMain:hover,
+#sideExitSevices:hover,
+#sideExitAbout:hover,
+#sideExitCases:hover {
+  cursor: pointer;
+  color: #e9081b;
 }
 /* Медиа запросы для Бокового меню */
 
