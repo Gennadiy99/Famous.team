@@ -11,50 +11,6 @@ const modWind_1 = document.getElementById("window_services");
 const modWind_2 = document.getElementById("window_about");
 const modWind_3 = document.getElementById("window_cases");
 
-// откр/закр мод.окон кликом на СПИСОК
-// установка color-active
-// уст.иконки позиции вверх/вниз
-link_services.addEventListener("click", function () {
-  console.log("Клик по Списку");
-  modWind_1.classList.toggle("mod__open");
-  link_services.classList.toggle("color-active");
-  iconListServ.classList.toggle("rotate_up");
-});
-
-link_about.addEventListener("click", function () {
-  modWind_2.classList.toggle("mod__open");
-  link_about.classList.toggle("color-active");
-  iconListAbout.classList.toggle("rotate_up");
-});
-
-link_cases.addEventListener("click", function () {
-  modWind_3.classList.toggle("mod__open");
-  link_cases.classList.toggle("color-active");
-  iconListCases.classList.toggle("rotate_up");
-});
-// Закрытие Мод окна СЕРВИС через иконку "крестик"
-const closeServ = document.getElementById("services-close");
-closeServ.addEventListener("click", function () {
-  modWind_1.classList.toggle("mod__open");
-  link_services.classList.toggle("color-active");
-  iconListServ.classList.toggle("rotate_up");
-});
-
-// Закрытие Мод окна О НАС через иконку "крестик"
-const closeAbout = document.getElementById("close-about");
-closeAbout.addEventListener("click", function () {
-  modWind_2.classList.toggle("mod__open");
-  link_about.classList.toggle("color-active");
-  iconListAbout.classList.toggle("rotate_up");
-});
-
-// Закрытие Мод окна Кейсы через иконку "крестик"
-const closeCases = document.getElementById("close-cases");
-closeCases.addEventListener("click", function () {
-  modWind_3.classList.toggle("mod__open");
-  link_cases.classList.toggle("color-active");
-  iconListCases.classList.toggle("rotate_up");
-});
 
 // открытие бокового меню. (РАБОТАЕТпока только на центральной странице)
 const navBar = document.querySelector(".nav-bar-menu");
@@ -94,5 +50,61 @@ sideCases.addEventListener("click", function () {
   iconListCases.classList.toggle("rotate_up");
   sideBar.classList.toggle("block-show");
 });
+// ****** Переделка кликов страницы *****
+// функция для обращения ко всем пунктам списка click__list
 
+const listClick = document.querySelectorAll('.click__list');
+const windMod = document.querySelectorAll('.modWindow')
+const iconRotate = document.querySelectorAll('.icon-right')
+
+// закрытие всех модальных окон./ откл кр.цвета/ поворот иконки.
+function closeAllModal(){
+  windMod.forEach((wind) =>{
+    wind.classList.add('mod__hidden');
+    wind.classList.remove('mod__open');
+  })
+  listClick.forEach((list)=>{
+    list.classList.remove('color-active');
+  })
+  iconRotate.forEach((icon)=>{
+    icon.classList.remove('rotate_up');
+    icon.classList.add('rotate_down');
+  })
+}
+// При клике "Закрытие Окон" получение id окна с кликом и открытие его.
+
+listClick.forEach((elem) => {
+  elem.addEventListener("click", () => {
+    closeAllModal();
+
+    elem.querySelector('.icon-right').classList.add('rotate_up');
+    elem.classList.add('color-active');
+
+    const targetId = elem.getAttribute('data-target');
+    const targetWindow = document.getElementById(targetId);
+    
+    targetWindow.classList.add('mod__open');
+    targetWindow.classList.remove('mod__hidden');
+    
+  });
+});
+// Новая формула для Закрытие всех Мод-Окно через Крестик.
+const closeIcon = document.querySelectorAll('.icon-cancel');
+closeIcon.forEach((icon)=>{
+  icon.addEventListener('click',()=>{
+    const modWind = icon.closest('.modWindow');
+    modWind.classList.remove('mod__open');
+    modWind.classList.add('mod__hidden');
+
+    listClick.forEach((list)=>{
+      list.classList.remove('color-active');
+    })
+
+    iconRotate.forEach((icon)=>{
+      icon.classList.remove('rotate_up');
+      icon.classList.add('rotate_down');
+    })
+  })
+})
+console.log(closeIcon);
 

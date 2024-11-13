@@ -91,13 +91,13 @@
             <ul class="heading-ul">
               <li class="head-li__posit " >
                 <!--вставить в li /active__padding / отступ для Модального между списками  -->
-                <div id="services" class="block__flex">
+                <div id="services" class="block__flex click__list" data-target="window_services">
                   <span>01</span>
                   <p>услуги</p>
                   <i class="icon-right rotate__down"></i>
                 </div>
                 <!-- Модальное окно-1 в JS убрается класс "mod__hidden" -->
-                <div class="services-mod-wind mod__hidden" id="window_services">
+                <div class="services-mod-wind mod__hidden modWindow" id="window_services">
                   <div class="mod-container">
                     <i class="mod-btn-close icon-cancel" id="services-close"></i>
                     <ul class="mod-wind-list__flex">
@@ -125,13 +125,13 @@
               </li>
               <li class="head-li__posit "  class="color-activ">
                 <!--вставить в li /active__padding / отступ для Модального между списками  -->
-                <div id="about_Us" class="block__flex">
+                <div id="about_Us" class="block__flex click__list" data-target="window_about">
                   <span>02</span>
                   <p>о нас</p>
                   <i class="icon-right rotate__down"></i>
                 </div>
                 <!-- модальное окно-2 в JS убрается класс "mod__hidden"-->
-                <div class="services-mod-wind mod__hidden" id="window_about">
+                <div class="services-mod-wind mod__hidden modWindow" id="window_about">
                   <div class="mod-container">
                     <i class="mod-btn-close icon-cancel" id="close-about"></i>
                     <p>
@@ -154,13 +154,13 @@
                 </div>
               </li>
               <li class="head-li__posit" >
-                <div id="cases" class="block__flex">
+                <div id="cases" class="block__flex click__list" data-target="window_cases">
                   <span>03</span>
                   <p>кейсы</p>
                   <i class="icon-right rotate__down"></i>
                 </div>
                 <!-- модальное окно-3 в JS убрается класс "mod__hidden"-->
-                <div class="services-mod-wind cases-mod-wind mod__hidden" id="window_cases">
+                <div class="services-mod-wind cases-mod-wind mod__hidden modWindow" id="window_cases">
                   <div class="mod-container__cases">
                     <i class="mod-btn-close icon-cancel" id="close-cases"></i>
                     <div class="wrapper-cases__flex">
